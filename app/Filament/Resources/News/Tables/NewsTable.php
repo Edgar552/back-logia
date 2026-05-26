@@ -17,16 +17,20 @@ class NewsTable
             ->columns([
 
                 Tables\Columns\ImageColumn::make('cover')
+                    ->label('Imagen')
                     ->square(),
 
                 Tables\Columns\TextColumn::make('title')
+                    ->label('Título')
                     ->searchable()
                     ->sortable(),
 
                 Tables\Columns\IconColumn::make('published')
+                    ->label('Status')
                     ->boolean(),
 
                 Tables\Columns\TextColumn::make('published_at')
+                    ->label('Fecha Publicacion')
                     ->dateTime()
                     ->sortable(),
             ])
