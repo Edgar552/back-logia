@@ -22,4 +22,6 @@ Route::middleware('throttle:60,1')->group(function () {
             ->firstOrFail();
     });
 
+    Route::post('/contact', [\App\Http\Controllers\Api\ContactController::class, 'send']);
+
 });
